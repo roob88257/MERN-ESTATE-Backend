@@ -7,7 +7,11 @@ require('dotenv').config();
 
 
 
-mongoose.connect(process.env.MONGO)
+mongoose.connect(process.env.MONGO).then(()=>{
+console.log("Connected to MONGODB");
+}).catch((err)=>{
+console.log(err);
+})
 
 const app = express();
 
