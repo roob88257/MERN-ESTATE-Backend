@@ -5,11 +5,9 @@ const mongoose = require('mongoose');
 
 require('dotenv').config();
 
-// const uri = "mongodb+srv://traj88257:<password>@cluster0.u4dus7o.mongodb.net/?retryWrites=true&w=majority";
 
-// rajestate
 
-mongoose.connect(process.env.MONGO);
+mongoose.connect(process.env.MONGO)
 
 const app = express();
 
