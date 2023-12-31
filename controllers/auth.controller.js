@@ -48,7 +48,9 @@ export const signup=async(req, res, next) => {
 
     const {password:pass, ...rest}=verifiedUser._doc;
 
-    res.cookie('jwt', token, { httpOnly: true });
+
+    // console.log(token); 
+    res.cookie('acess_token', token, { httpOnly: true });
     res.status(200);
     res.json(rest);
 }
